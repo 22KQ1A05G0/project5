@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>
+UI Pages
+</title>
+</head>
+<body>
+    <style>
+        body{
+            background-image: url(login1.jpg);
+            background-size: cover;
+        }
+body{
+     text-align: center;
+}
+h2{
+     color: black;
+}
+       
+        /*  Smart phone      */
+                  
+        @media screen and (min-width:320px )  {
+
+body {
+     background-color: aqua;
+}
+}
+/*  Tablet,ipad      */    
+
+@media Screen and (min-width:768px) and (max-width:1024px){
+body {
+     background-color: rgb(177, 48, 48);
+}
+}
+
+/* Desktops and Laptops asfsdf     */    
+
+@media Screen and (min-width:1224px) {
+body {
+     background-color: rgb(48, 151, 8);
+}
+}
+
+/* Large Screens---------  */
+@media Screen and (min-width:1824px) {
+body {
+     background-color: rgb(101, 51, 208);
+}
+}
+</style>
+    <script>
+        // User Validations
+function loginValidation() {
+            // Ramesh
+  var uname = document.myform.username.value;
+             //Ramesh@123
+  var password = document.myform.password.value;
+            if(uname==null || uname=="") {
+              alert("Name cant be blank")
+              return false;  
+           } else if (password.length<6){
+              alert("Password Must be 6 letters")
+              return false;
+           }  
+           return true                 
+        }           
+     </script>
+     </head>
+<body>
+     <h2>Login Page</h2>  
+<form name="myform" action="Success.html" 	onsubmit="return loginValidation(this)">
+ 
+User Name : <input type="text" name="username"> <br>
+Password :  <input type="password" name="password"> <br>
+         <input type="submit" value="Submit">     
+          
+        </form>
+   </body>
+</html>
